@@ -259,6 +259,7 @@ color: #757575;
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
+    
 }
 
 .beckdrop {
@@ -276,7 +277,7 @@ color: #757575;
 }
 
 .beckdrop.is-hidden .modal {
-    transform: translate(-50%, -50%) scale(1.1);
+    transform: translate(-50%, -50%) scale(0.9);
 }
 
 
@@ -295,7 +296,7 @@ color: #757575;
         0px 1px 1px 0px rgba(0, 0, 0, 0.14),
         0px 1px 3px 0px rgba(0, 0, 0, 0.12);
 
-    transform: translate(-50%, -50%) scale(1);
+    transform: translate(-50%, -50%) scale(1.1);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
