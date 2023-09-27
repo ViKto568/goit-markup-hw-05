@@ -10,6 +10,9 @@
     /* font-family */
     --praimary-font-family: 'Roboto', sans-serif;
 
+    /* animation */
+    --time-animation: 2500ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 html {
@@ -101,6 +104,11 @@ img {
 
     color: var(--secondary-text-color);
     text-decoration: none;
+
+    transition-property: color, transform;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    
 }
 
 /*  Позиціоновані елементи */
@@ -117,7 +125,12 @@ img {
     height: 4px;
     border-radius: 2px;
     background: var(--accent-color);
+    opacity: 0;
 
+}
+
+.current.nav-link::after {
+    opacity: 1;
 }
 
 .nav-link:hover,
@@ -138,6 +151,11 @@ img {
 
     color: var(--praimary-tex-color);
     text-decoration: none;
+
+    transition-property: color, transform;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+     
 }
 
 .mailto-tel:hover,
@@ -209,6 +227,8 @@ nav {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+
+    
 }
 
 .hero-titel {
@@ -255,12 +275,7 @@ background-color: #FFFFFF;
 color: #757575;
 } */
 
-.beckdrop.is-hidden {
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-    
-}
+
 
 .beckdrop {
     position: fixed;
@@ -268,18 +283,25 @@ color: #757575;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.20);
+    background-color: rgba(0, 0, 0, 0.20);
 
     opacity: 1;
-    transition: opaciti 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
+    transition: opaciti var(--time-animation);
+    
     z-index: 4;
 }
 
-.beckdrop.is-hidden .modal {
-    transform: translate(-50%, -50%) scale(0.9);
+.beckdrop.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
 }
 
+.beckdrop.is-hidden .modal {
+    transform: translate(-50%, -50%) scale(.9);
+    
+}
 
 
 .modal {
@@ -297,10 +319,9 @@ color: #757575;
         0px 1px 3px 0px rgba(0, 0, 0, 0.12);
 
     transform: translate(-50%, -50%) scale(1.1);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform var(--time-animation);
 
 }
-
 
 
 .modal-btn {
@@ -621,6 +642,11 @@ color: #757575;
 
     background-color: var(--action-white-color);
     fill: var(--action-icon-color);
+
+    transition-property: background-color, fill, transform;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    
 }
 
 .social:hover,
@@ -649,8 +675,13 @@ color: #757575;
     border-radius: 4px;
     border: 1px solid var(--action-icon-color);
 
-    background: var(--action-white-color);
+    background-color: var(--action-white-color);
     fill: var(--action-icon-color);
+
+    transition-property: fill, border, transform;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    
 
 }
 
@@ -684,7 +715,12 @@ color: #757575;
 
     border-radius: 4px;
     cursor: pointer;
-    border: none
+    border: none;
+
+    transition-property: background-color, color, box-shadow, transform;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    
 }
 
 .filter-btn:hover,
@@ -695,13 +731,20 @@ color: #757575;
 }
 
 .project {
+    position: relative;
     text-decoration: none;
+
+    transition-property: border, box-shadow, background-color, transform;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    
 }
 
 .project:hover,
 .project:focus {
+    position: absolute;
     border: 1px solid #EEE;
-    background: var(--action-white-color);
+    background-color: var(--action-white-color);
     box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16), 0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
 }
 
@@ -719,7 +762,7 @@ color: #757575;
     height: 294px;
     background: rgba(33, 150, 243, 0.90);
     transform: translateY(100%);
-    transition: transform 250ms;
+    transition: transform var(--time-animation);
 
 
 }
@@ -727,7 +770,7 @@ color: #757575;
 .project:focus .project-overlay,
 .project:hover .project-overlay {
     transform: translateY(0);
-    transition: transform 250ms;
+    transition: transform var(--time-animation);
 
 }
 
@@ -848,6 +891,11 @@ color: #757575;
     letter-spacing: 0.03em;
     color: var(--action-white-color);
     text-decoration: none;
+
+    transition-property: color, transform;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    
 }
 
 .map-link:hover,
@@ -860,6 +908,11 @@ color: #757575;
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
     text-decoration: none;
+
+    transition-property: color, transform;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    
 }
 
 .footer-link:hover,
@@ -906,6 +959,11 @@ color: #757575;
 
     background-color: rgba(255, 255, 255, 0.10);
     fill: var(--action-white-color);
+
+    transition-property: background-color, fill, transform;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    
 }
 
 .come-back-social:hover,
