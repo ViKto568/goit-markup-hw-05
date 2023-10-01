@@ -11,7 +11,7 @@
     --praimary-font-family: 'Roboto', sans-serif;
 
     /* animation */
-    --time-animation: 2500ms cubic-bezier(0.4, 0, 0.2, 1);
+    --time-animation: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
@@ -285,8 +285,8 @@ color: #757575;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.20);
 
-    opacity: 1;
-    transition: opaciti var(--time-animation);
+    transition: opaciti var(--time-animation),
+    visibility var(--time-animation);
     
     z-index: 4;
 }
@@ -296,11 +296,6 @@ color: #757575;
     visibility: hidden;
     pointer-events: none;
 
-}
-
-.beckdrop.is-hidden .modal {
-    transform: translate(-50%, -50%) scale(.9);
-    
 }
 
 
@@ -318,11 +313,21 @@ color: #757575;
         0px 1px 1px 0px rgba(0, 0, 0, 0.14),
         0px 1px 3px 0px rgba(0, 0, 0, 0.12);
 
-    transform: translate(-50%, -50%) scale(1.1);
-    transition: transform var(--time-animation);
+    
+    transition: transform var(--time-animation), 
+    opacity var(--time-animation);
 
 }
 
+.beckdrop.is-hidden .modal {
+    transform: translate(-50%, -50%) scale(.9);
+    opacity: 0;
+}
+
+.beckdrop .modal {
+    transform: translate(-50%, -50%) scale(1.1);
+    opacity: 1;
+}
 
 .modal-btn {
     position: absolute;
