@@ -105,7 +105,7 @@ img {
     color: var(--secondary-text-color);
     text-decoration: none;
 
-    transition-property: color, transform;
+    transition-property: color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     
@@ -152,7 +152,7 @@ img {
     color: var(--praimary-tex-color);
     text-decoration: none;
 
-    transition-property: color, transform;
+    transition-property: color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
      
@@ -276,7 +276,6 @@ color: #757575;
 } */
 
 
-
 .beckdrop {
     position: fixed;
     top: 0;
@@ -285,9 +284,9 @@ color: #757575;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.20);
 
-    transition: opaciti var(--time-animation),
+    transition: opacity var(--time-animation),
     visibility var(--time-animation);
-    
+
     z-index: 4;
 }
 
@@ -314,19 +313,18 @@ color: #757575;
         0px 1px 3px 0px rgba(0, 0, 0, 0.12);
 
     
-    transition: transform var(--time-animation), 
-    opacity var(--time-animation);
+    transition: transform var(--time-animation);
 
 }
 
 .beckdrop.is-hidden .modal {
     transform: translate(-50%, -50%) scale(.9);
-    opacity: 0;
+     
 }
 
 .beckdrop .modal {
     transform: translate(-50%, -50%) scale(1.1);
-    opacity: 1;
+     
 }
 
 .modal-btn {
@@ -648,7 +646,7 @@ color: #757575;
     background-color: var(--action-white-color);
     fill: var(--action-icon-color);
 
-    transition-property: background-color, fill, transform;
+    transition-property: background-color, fill;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     
@@ -683,7 +681,7 @@ color: #757575;
     background-color: var(--action-white-color);
     fill: var(--action-icon-color);
 
-    transition-property: fill, border, transform;
+    transition-property: fill, border;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     
@@ -722,7 +720,7 @@ color: #757575;
     cursor: pointer;
     border: none;
 
-    transition-property: background-color, color, box-shadow, transform;
+    transition-property: background-color, color, box-shadow;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     
@@ -739,7 +737,7 @@ color: #757575;
     position: relative;
     text-decoration: none;
 
-    transition-property: border, box-shadow, background-color, transform;
+    transition-property: box-shadow;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     
@@ -897,7 +895,7 @@ color: #757575;
     color: var(--action-white-color);
     text-decoration: none;
 
-    transition-property: color, transform;
+    transition-property: color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     
@@ -914,7 +912,7 @@ color: #757575;
     color: rgba(255, 255, 255, 0.6);
     text-decoration: none;
 
-    transition-property: color, transform;
+    transition-property: color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     
@@ -965,7 +963,7 @@ color: #757575;
     background-color: rgba(255, 255, 255, 0.10);
     fill: var(--action-white-color);
 
-    transition-property: background-color, fill, transform;
+    transition-property: background-color, fill;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     
